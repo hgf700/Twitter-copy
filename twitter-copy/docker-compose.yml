@@ -1,0 +1,30 @@
+services:
+  nextjs:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: twitter-nextjs
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@postgres:5432/twitter
+    volumes:
+      - /app/node_modules
+
+  postgres:
+    image: postgres:16
+    container_name: twitter-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: twitter
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
