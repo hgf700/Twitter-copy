@@ -14,10 +14,21 @@ const MiddleMainContent = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await fetch("/api/post");
-      const data = await res.json();
-      setPosts(data);
+      try {
+        const res = await fetch("/api/post");
+
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+
+        const text = await res.text();
+        const data = text ? JSON.parse(text) : [];
+        setPosts(data);
+      } catch (error) {
+        console.error("Error fetching posts:", error);
+      }
     };
+
 
     fetchPosts();
   }, []);
