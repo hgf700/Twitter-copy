@@ -1,0 +1,13 @@
+.Space{
+    margin-left: 40px;
+    margin-top: 10px;
+    
+}
+
+.Logo, .Home, .Explore
+{
+    
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}

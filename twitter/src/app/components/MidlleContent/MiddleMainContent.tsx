@@ -1,4 +1,4 @@
-const MainContent = () => {
+const MiddleMainContent = () => {
   return (
     <div>
       <h1>Witaj w aplikacji!</h1>
@@ -7,4 +7,4 @@ const MainContent = () => {
   );
 };
 
-export default MainContent;
+export default MiddleMainContent;

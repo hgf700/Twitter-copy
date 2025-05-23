@@ -1,0 +1,24 @@
+.Searchbar {
+  grid-area: searchbar;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.Searchbar input {
+  width: 100%;
+  max-width: 250px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 9999px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.Searchbar input:focus {
+  border-color: #1d9bf0;
+  box-shadow: 0 0 0 2px rgba(29, 155, 240, 0.2);
+}
