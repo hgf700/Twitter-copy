@@ -1,1 +1,20 @@
+# Node dependencies
 node_modules
+npm-debug.log
+yarn-error.log
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Prisma migrations (jeśli nie chcesz kopiować ich do kontenera)
+migrations
+
+# Build output (Next.js / TypeScript / etc.)
+.next
+dist
+out
+
+# Misc
+.DS_Store

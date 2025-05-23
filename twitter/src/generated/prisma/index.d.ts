@@ -892,18 +892,21 @@ export namespace Prisma {
   export type PostMinAggregateOutputType = {
     id: number | null
     message: string | null
+    sender: string | null
     createdAt: Date | null
   }
 
   export type PostMaxAggregateOutputType = {
     id: number | null
     message: string | null
+    sender: string | null
     createdAt: Date | null
   }
 
   export type PostCountAggregateOutputType = {
     id: number
     message: number
+    sender: number
     createdAt: number
     _all: number
   }
@@ -920,18 +923,21 @@ export namespace Prisma {
   export type PostMinAggregateInputType = {
     id?: true
     message?: true
+    sender?: true
     createdAt?: true
   }
 
   export type PostMaxAggregateInputType = {
     id?: true
     message?: true
+    sender?: true
     createdAt?: true
   }
 
   export type PostCountAggregateInputType = {
     id?: true
     message?: true
+    sender?: true
     createdAt?: true
     _all?: true
   }
@@ -1025,6 +1031,7 @@ export namespace Prisma {
   export type PostGroupByOutputType = {
     id: number
     message: string
+    sender: string
     createdAt: Date
     _count: PostCountAggregateOutputType | null
     _avg: PostAvgAggregateOutputType | null
@@ -1050,28 +1057,32 @@ export namespace Prisma {
   export type PostSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     message?: boolean
+    sender?: boolean
     createdAt?: boolean
   }, ExtArgs["result"]["post"]>
 
   export type PostSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     message?: boolean
+    sender?: boolean
     createdAt?: boolean
   }, ExtArgs["result"]["post"]>
 
   export type PostSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     message?: boolean
+    sender?: boolean
     createdAt?: boolean
   }, ExtArgs["result"]["post"]>
 
   export type PostSelectScalar = {
     id?: boolean
     message?: boolean
+    sender?: boolean
     createdAt?: boolean
   }
 
-  export type PostOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "message" | "createdAt", ExtArgs["result"]["post"]>
+  export type PostOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "message" | "sender" | "createdAt", ExtArgs["result"]["post"]>
 
   export type $PostPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Post"
@@ -1079,6 +1090,7 @@ export namespace Prisma {
     scalars: $Extensions.GetPayloadResult<{
       id: number
       message: string
+      sender: string
       createdAt: Date
     }, ExtArgs["result"]["post"]>
     composites: {}
@@ -1505,6 +1517,7 @@ export namespace Prisma {
   interface PostFieldRefs {
     readonly id: FieldRef<"Post", 'Int'>
     readonly message: FieldRef<"Post", 'String'>
+    readonly sender: FieldRef<"Post", 'String'>
     readonly createdAt: FieldRef<"Post", 'DateTime'>
   }
     
@@ -1889,6 +1902,7 @@ export namespace Prisma {
   export const PostScalarFieldEnum: {
     id: 'id',
     message: 'message',
+    sender: 'sender',
     createdAt: 'createdAt'
   };
 
@@ -1981,12 +1995,14 @@ export namespace Prisma {
     NOT?: PostWhereInput | PostWhereInput[]
     id?: IntFilter<"Post"> | number
     message?: StringFilter<"Post"> | string
+    sender?: StringFilter<"Post"> | string
     createdAt?: DateTimeFilter<"Post"> | Date | string
   }
 
   export type PostOrderByWithRelationInput = {
     id?: SortOrder
     message?: SortOrder
+    sender?: SortOrder
     createdAt?: SortOrder
   }
 
@@ -1996,12 +2012,14 @@ export namespace Prisma {
     OR?: PostWhereInput[]
     NOT?: PostWhereInput | PostWhereInput[]
     message?: StringFilter<"Post"> | string
+    sender?: StringFilter<"Post"> | string
     createdAt?: DateTimeFilter<"Post"> | Date | string
   }, "id">
 
   export type PostOrderByWithAggregationInput = {
     id?: SortOrder
     message?: SortOrder
+    sender?: SortOrder
     createdAt?: SortOrder
     _count?: PostCountOrderByAggregateInput
     _avg?: PostAvgOrderByAggregateInput
@@ -2016,45 +2034,53 @@ export namespace Prisma {
     NOT?: PostScalarWhereWithAggregatesInput | PostScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"Post"> | number
     message?: StringWithAggregatesFilter<"Post"> | string
+    sender?: StringWithAggregatesFilter<"Post"> | string
     createdAt?: DateTimeWithAggregatesFilter<"Post"> | Date | string
   }
 
   export type PostCreateInput = {
     message: string
+    sender: string
     createdAt?: Date | string
   }
 
   export type PostUncheckedCreateInput = {
     id?: number
     message: string
+    sender: string
     createdAt?: Date | string
   }
 
   export type PostUpdateInput = {
     message?: StringFieldUpdateOperationsInput | string
+    sender?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type PostUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     message?: StringFieldUpdateOperationsInput | string
+    sender?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type PostCreateManyInput = {
     id?: number
     message: string
+    sender: string
     createdAt?: Date | string
   }
 
   export type PostUpdateManyMutationInput = {
     message?: StringFieldUpdateOperationsInput | string
+    sender?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type PostUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     message?: StringFieldUpdateOperationsInput | string
+    sender?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -2098,6 +2124,7 @@ export namespace Prisma {
   export type PostCountOrderByAggregateInput = {
     id?: SortOrder
     message?: SortOrder
+    sender?: SortOrder
     createdAt?: SortOrder
   }
 
@@ -2108,12 +2135,14 @@ export namespace Prisma {
   export type PostMaxOrderByAggregateInput = {
     id?: SortOrder
     message?: SortOrder
+    sender?: SortOrder
     createdAt?: SortOrder
   }
 
   export type PostMinOrderByAggregateInput = {
     id?: SortOrder
     message?: SortOrder
+    sender?: SortOrder
     createdAt?: SortOrder
   }
 

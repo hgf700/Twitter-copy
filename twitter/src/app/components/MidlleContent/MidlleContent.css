@@ -1,5 +1,18 @@
+.MainContent {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 20px;
+  /* background-color: #f9f9f9; */
+  font-family: sans-serif;
+}
 
-.MainContent{
-    border: 1px solid #ccc;
-    
+.MainContent ul {
+  list-style: none;
+  padding: 0;
+}
+
+.MainContent li {
+  margin-bottom: 12px;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
 }
