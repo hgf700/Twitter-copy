@@ -22,11 +22,16 @@ body {
   display: grid;
   grid-template-areas:
     "leftsidebar middleheader searchbar"
+    "leftsidebar usermessage rightsidebar"
     "leftsidebar main rightsidebar";
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto auto 1fr;
   gap: 10px;
   height: 100vh;
+}
+
+.usermessage{
+  grid-area: usermessage;
 }
 
 .middleheader {

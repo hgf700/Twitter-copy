@@ -1,8 +1,9 @@
+import "./MidlleContent.css"
+
 const MiddleMainContent = () => {
   return (
-    <div>
+    <div className="MainContent">
       <h1>Witaj w aplikacji!</h1>
-      <p>Tu wyświetla się główna treść.</p>
     </div>
   );
 };
