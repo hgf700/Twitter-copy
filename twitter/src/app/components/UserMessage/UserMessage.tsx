@@ -1,23 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import React from "react";
+import { useUserMessage } from "./useUserMessage";
 import "./UserMessage.css";
 
 const UserMessage = () => {
-  const [message, setMessage] = useState("");
+  const { message, setMessage, sendMessage } = useUserMessage();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    if (!message.trim()) return;
-
-    await fetch("/api/post", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message, sender: "anonymous" }),
-    });
-
-    setMessage(""); // wyczyść po wysłaniu
+    await sendMessage();
   };
 
   return (
