@@ -12,14 +12,25 @@ const UserMessage = () => {
     await sendMessage();
   };
 
-  return (
-    <form className="InputMessage" onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="What is happening?"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-      />
+return (
+    <form className="BoxOfMessage" onSubmit={handleSubmit}>
+      <div className="InputMessage">
+        <input
+          type="text"
+          placeholder="What is happening?"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        />
+      </div>
+      <div className="ExtraInput">
+        
+        <input
+          type="file"
+          accept="audio/*,video/*,image/*"
+          // onChange={(e) => setFile(e.target.files?.[0] || null)}
+        />
+        <button type="submit">Wyślij</button>
+      </div>
     </form>
   );
 };

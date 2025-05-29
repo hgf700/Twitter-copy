@@ -7,7 +7,7 @@ export const useUserMessage = () => {
   const sendMessage = async () => {
     if (!message.trim()) return;
 
-    await fetch(`${API_URL}/api/post`, {
+    await fetch(`${API_URL}/router`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message }),

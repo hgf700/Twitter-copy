@@ -13,7 +13,7 @@ export const usePosts = () => {
 const API_URL = "http://localhost:3001";
 
 const fetchPosts = async () => {
-  const res = await fetch(`${API_URL}/api/post`);
+  const res = await fetch(`${API_URL}/router`);
   const data = await res.json();
   setPosts(data);
 };
@@ -31,7 +31,7 @@ const fetchPosts = async () => {
   }, []);
 
 const addPost = async (message: string) => {
-  const res = await fetch(`${API_URL}/api/post`, {
+  const res = await fetch(`${API_URL}/router`, {
     method: "POST",
     body: JSON.stringify({ message }),
     headers: { "Content-Type": "application/json" },

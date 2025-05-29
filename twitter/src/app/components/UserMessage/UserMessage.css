@@ -24,3 +24,31 @@
   box-shadow: 0 0 5px rgba(29, 161, 242, 0.4);
   /* background-color: white; */
 }
+
+.ExtraInput {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+.ExtraInput input[type="file"] {
+  cursor: pointer;
+}
+
+.ExtraInput button {
+  padding: 10px 20px;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ExtraInput button:hover {
+  background-color: #0d8ddb;
+}

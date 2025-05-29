@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "client": "next dev -p 3000",
-    "server": "node --loader ts-node/esm server.ts",
+    "server": "node --loader ts-node/esm src/router/WebSocketUserInput.ts",
+
     "dev": "npm run client",
     "socket": "npm run server",
     "dev:all": "concurrently \"npm run client\" \"npm run server\""
