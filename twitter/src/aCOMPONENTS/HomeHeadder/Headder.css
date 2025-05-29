@@ -1,0 +1,32 @@
+.Headder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  color: white;
+  border-bottom: 1px solid #ccc;
+  background-color: #14171a;
+  
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+
+.MiddleHeadder {
+  display: flex;
+  gap: 120px; /* równa przerwa między przyciskami */
+}
+
+.MiddleHeadder button {
+  padding: 10px 20px;
+  background-color: #1d9bf0; /* kolor tła */
+  color: white;
+  border: none;
+  border-radius: 9999px; /* zaokrąglony wygląd */
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.MiddleHeadder button:hover {
+  background-color: #1a8cd8;
+}

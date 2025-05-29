@@ -1,7 +1,7 @@
 // src/app/home/layout.tsx
 import React from 'react';
 import "./view.css"; // lub "../globals.css" jeśli masz plik bezpośrednio w src/
-import LeftSidebar from '../Acomponents/LeftSidebar/LeftSidebar';
+import LeftSidebar from '../../aCOMPONENTS/LeftSidebar/LeftSidebar';
 
 
 export default function Layout({ children }: { children: React.ReactNode }) {

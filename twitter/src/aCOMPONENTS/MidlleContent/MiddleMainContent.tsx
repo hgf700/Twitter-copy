@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { usePosts } from "./usePosts";
+import { usePosts } from "./useMiddleMainContent";
 import "./MidlleContent.css";
 
 const MiddleMainContent = () => {

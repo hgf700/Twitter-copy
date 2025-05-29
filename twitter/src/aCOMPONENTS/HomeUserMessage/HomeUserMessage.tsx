@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { useUserMessage } from "./useUserMessage";
-import "./UserMessage.css";
+import { useUserMessage } from "./useHomeUserMessage";
+import "./HomeUserMessage.css";
 
 const UserMessage = () => {
   const { message, setMessage, sendMessage } = useUserMessage();

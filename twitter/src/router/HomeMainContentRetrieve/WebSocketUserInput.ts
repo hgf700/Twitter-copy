@@ -4,7 +4,7 @@ import type { Request, Response } from "express";
 import http from "http";
 import cors from "cors";
 import { Server } from "socket.io";
-import { prisma } from "../lib/prisma.js"; // Upewnij się, że rozszerzenie to .js, jeśli używasz TS z ESM
+import { prisma } from "../../lib/prisma.js"; // Upewnij się, że rozszerzenie to .js, jeśli używasz TS z ESM
 
 const app = express();
 const server = http.createServer(app);
@@ -18,7 +18,7 @@ app.use(cors());
 app.use(express.json());
 
 // ===================
-// GET /api/post
+// GET 
 // ===================
 app.get("/router", async (req: Request, res: Response) => {
   try {
@@ -33,7 +33,7 @@ app.get("/router", async (req: Request, res: Response) => {
 });
 
 // ===================
-// POST /api/post
+// POST 
 // ===================
 app.post("/router", async (req: Request, res: Response) => {
   const { message } = req.body;

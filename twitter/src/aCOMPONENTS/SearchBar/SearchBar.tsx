@@ -1,6 +1,6 @@
-import "./RightSearchBar.css"
+import "./SearchBar.css"
 
-const RightSearchBar = () => {
+const SearchBar = () => {
   return (
     <div className="Searchbar">
       <input type="text" placeholder="Search" />
@@ -8,4 +8,4 @@ const RightSearchBar = () => {
   );
 };
 
-export default RightSearchBar;
+export default SearchBar;
