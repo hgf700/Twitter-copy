@@ -1,4 +1,5 @@
 import "./LeftSidebar.css";
+import Link from 'next/link';
 
 const LeftSidebar = () => {
   return (
@@ -6,11 +7,14 @@ const LeftSidebar = () => {
       <div className="Logo">
         <h2>Logo</h2>
       </div>
-      <div className="Home">
-        <button>Home</button>
+      <div className="Links">
+        <Link href="/pages/home">Home</Link>
       </div>
-       <div className="Explore">
-        <button>Explore</button>
+       <div className="Links">
+        <Link href="/pages/explore">Explore</Link>
+      </div>
+      <div className="Links">
+        <Link href="/pages/notifications">Notifications</Link>
       </div>
     </div>
   );

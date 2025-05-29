@@ -1,6 +1,6 @@
-import Image from "next/image";
-import Layout from './layout';
+// src/app/page.tsx
+import { redirect } from 'next/navigation'
 
-export default function Home() {
-  return <Layout />;
+export default function RootPage() {
+  redirect('/home')
 }
