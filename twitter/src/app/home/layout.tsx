@@ -2,14 +2,14 @@
 import React from 'react';
 import "./view.css"; // lub "../globals.css" jeśli masz plik bezpośrednio w src/
 
-import Headder from '../components/Headder/Headder';
-import LeftSidebar from '../components/LeftSidebar/LeftSidebar';
-import MiddleMainContent from '../components/MidlleContent/MiddleMainContent';
-import RightSidebar from '../components/RightSidebar/RightSidebar';
-import SearchBar from '../components/RightSearchBar/RightSearchBar';
-import UserMessage from '../components/UserMessage/UserMessage';
+import Headder from '../Acomponents/Headder/Headder';
+import LeftSidebar from '../Acomponents/LeftSidebar/LeftSidebar';
+import MiddleMainContent from '../Acomponents/MidlleContent/MiddleMainContent';
+import RightSidebar from '../Acomponents/RightSidebar/RightSidebar';
+import SearchBar from '../Acomponents/RightSearchBar/RightSearchBar';
+import UserMessage from '../Acomponents/UserMessage/UserMessage';
 
-export default function HomeLayout({ children }: { children: React.ReactNode }) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="container">
       <div className="leftsidebar"><LeftSidebar /></div>

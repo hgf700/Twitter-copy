@@ -8,13 +8,13 @@ const LeftSidebar = () => {
         <h2>Logo</h2>
       </div>
       <div className="Links">
-        <Link href="/pages/home">Home</Link>
+        <Link href="/home">Home</Link>
       </div>
        <div className="Links">
-        <Link href="/pages/explore">Explore</Link>
+        <Link href="/explore">Explore</Link>
       </div>
       <div className="Links">
-        <Link href="/pages/notifications">Notifications</Link>
+        <Link href="/notifications">Notifications</Link>
       </div>
     </div>
   );
