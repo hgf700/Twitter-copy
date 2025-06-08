@@ -22,12 +22,16 @@ body {
   display: grid;
   grid-template-areas:
     "leftsidebar middleheader searchbar"
-    "leftsidebar usermessage rightsidebar"
-    "leftsidebar main rightsidebar";
+    "leftsidebar usermessage profileRecommendations"
+    "leftsidebar main postRecomendations";
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: auto auto 1fr;
   gap: 10px;
   height: 100vh;
+}
+
+.postRecomendations{
+  grid-area: postRecomendations;
 }
 
 .usermessage{
@@ -46,7 +50,7 @@ body {
   grid-area: main;
 }
 
-.rightsidebar {
-  grid-area: rightsidebar;
+.profileRecommendations {
+  grid-area: profileRecommendations;
 }
 

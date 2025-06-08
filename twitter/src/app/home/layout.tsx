@@ -5,9 +5,11 @@ import "./view.css"; // lub "../globals.css" jeśli masz plik bezpośrednio w sr
 import Headder from '../../aCOMPONENTS/HomeHeadder/Headder';
 import LeftSidebar from '../../aCOMPONENTS/LeftSidebar/LeftSidebar';
 import MiddleMainContent from '../../aCOMPONENTS/MidlleContent/MiddleMainContent';
-import RightSidebar from '../../aCOMPONENTS/RightSidebar/RightSidebar';
 import SearchBar from '../../aCOMPONENTS/SearchBar/SearchBar';
 import UserMessage from '../../aCOMPONENTS/HomeUserMessage/HomeUserMessage';
+import ProfileRecommendations from '../../aCOMPONENTS/ProfileRecommendations/ProfileRecommendations';
+import PostRecomendations from '../../aCOMPONENTS/PostRecomendations/PostRecomendations';
+
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -17,7 +19,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div className="usermessage"><UserMessage /></div>
       <div className="main"><MiddleMainContent /></div>
       <div className="searchbar"><SearchBar /></div>
-      <div className="rightsidebar"><RightSidebar /></div>
+      <div className="profileRecommendations"><ProfileRecommendations /></div>
+      <div className="postRecomendations"><PostRecomendations /></div>
       {children}
     </div>
   );

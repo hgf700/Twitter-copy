@@ -1,44 +1,38 @@
-// import { useEffect, useState } from "react";
-// import socket from "@/lib/socket";
+"use client";
 
-// export type User = {
-//   userid: number;
-//   nickname: string;
-//   urltoaccount: string;
-// };
+import { useState, useEffect } from "react";
 
-// export const useProfileRecommendations = () => {
-//   const [posts, setPosts] = useState<User[]>([]);
+export type User = {
+  userid: number;
+  nickname: string;
+  urltoaccount: string;
+};
 
-// const API_URL = "http://localhost:3002";
+const mockUsers: User[] = [
+  {
+    userid: 1,
+    nickname: "asd1",
+    urltoaccount: "http://asd1.com"
+  },
+  {
+    userid: 2,
+    nickname: "asd2",
+    urltoaccount: "http://asd2.com"
+  },
+  {
+    userid: 3,
+    nickname: "asd3",
+    urltoaccount: "http://asd3.com"
+  }
+];
 
-// const fetchPosts = async () => {
-//   const res = await fetch(`${API_URL}/router`);
-//   const data = await res.json();
-//   setPosts(data);
-// };
+export const useProfileRecommendations = () => {
+  const [users, setUsers] = useState<User[]>([]);
 
-//   useEffect(() => {
-//     fetchPosts();
+  useEffect(() => {
+    // symulacja pobrania danych
+    setUsers(mockUsers);
+  }, []);
 
-//     socket.on("new-post", (post: Post) => {
-//       setPosts((prev) => [post, ...prev]);
-//     });
-
-//     return () => {
-//       socket.off("new-post");
-//     };
-//   }, []);
-
-// const addPost = async (message: string) => {
-//   const res = await fetch(`${API_URL}/router`, {
-//     method: "POST",
-//     body: JSON.stringify({ message }),
-//     headers: { "Content-Type": "application/json" },
-//   });
-//   await res.json();
-// };
-
-
-//   return { posts, addPost };
-// };
+  return users;
+};

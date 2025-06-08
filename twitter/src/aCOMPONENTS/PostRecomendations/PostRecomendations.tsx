@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 const PostRecomendations = () => {
   return (
-    <div className="Space">
-
+    <div className="">
+        <p>asd</p>
     </div>
   );
 };
